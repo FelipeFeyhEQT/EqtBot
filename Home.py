@@ -27,7 +27,7 @@ def sidebar():
             cria_chain_conversa()
             st.rerun()
 
-    st.sidebar.image('C:/ProjetosOS/ChatPDF/pages/logo-eqtlab-nobg.png', use_column_width=True)
+    st.sidebar.image('pages/logo-eqtlab-nobg.png', use_column_width=True)
 
 def chat_window():
     st.markdown(
@@ -78,20 +78,13 @@ def chat_window():
     st.markdown(
         """
         <div class="footer">
-            <img src="C:/ProjetosOS/ChatPDF/pages/logo.jpg" width="100">
+            <img src="pages/logo.jpg" width="100">
         </div>
         """,
         unsafe_allow_html=True
     )
 
-def add_favicon():
-    favicon_html = """
-    <link rel="icon" href="C:/ProjetosOS/ChatPDF/pages/logo.ico" type="image/x-icon">
-    """
-    components.html(favicon_html, height=0)
-
 def main():
-    add_favicon()
     with st.sidebar:
         sidebar()
     chat_window()
